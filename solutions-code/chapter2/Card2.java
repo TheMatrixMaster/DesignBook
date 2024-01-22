@@ -17,8 +17,10 @@ package chapter2;
  */
 public class Card2
 {
-	private boolean aIsRed = false;
-	private boolean aIsHighSuit = false;
+	private boolean aIsRed = false;			// check color of card (red/black)
+	private boolean aIsHighSuit = false;	// check suit of card (high/low)
+
+	// use binary representation of rank to store rank of card
 	private boolean aRank1 = false;
 	private boolean aRank2 = false;
 	private boolean aRank3 = false;
@@ -59,6 +61,7 @@ public class Card2
 	
 	private void fromSuit(Suit pSuit)
 	{
+		// Set the isRed and isHighSuit flags from the suit enum
 		if( pSuit == Suit.HEARTS || pSuit == Suit.DIAMONDS )
 		{
 			aIsRed = true;
@@ -71,6 +74,8 @@ public class Card2
 	
 	private void fromRank(Rank pRank)
 	{
+		// Set the rank flags from the rank enum by converting 
+		// from decimal to binary representation
 		int value = pRank.ordinal();
 		aRank1 = value % 2 == 1;
 		value /= 2;
@@ -80,6 +85,9 @@ public class Card2
 		value /= 2;
 		aRank4 = value % 2 == 1;
 		value /= 2;
+		
+		// the rank of the card is stored in the following binary representation
+		// (aRank4, aRank3, aRank2, aRank1)_2
 	}
 	
 	/**
@@ -87,6 +95,7 @@ public class Card2
 	 */
 	public Rank getRank()
 	{
+		// Convert the binary representation of the rank to decimal
 		int value = 0;
 		if( aRank4 == true )
 		{
@@ -104,6 +113,8 @@ public class Card2
 		{
 			value += 1;
 		}
+		
+		// return the rank of the card
 		return Rank.values()[value];
 	}
 	

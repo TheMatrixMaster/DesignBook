@@ -1,0 +1,12 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Library/Frameworks/javafx-sdk-21.0.1/lib/*.jar",
+    ],
+    "java.project.sourcePaths": [
+        "chapter-code",
+        "chapter-code-2ndEdition",
+        "solutions-code"
+    ],
+    "java.project.outputPath": "bin/designbook/",
+}

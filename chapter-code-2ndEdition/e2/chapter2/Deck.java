@@ -77,6 +77,7 @@ public class Deck {
 	 * @return An unmodifiable list of all the cards in the deck.
 	 */
 	public List<Card> getCards() {
+		// return new ArrayList<>(aCards);
 		return Collections.unmodifiableList(aCards);
 	}
 }

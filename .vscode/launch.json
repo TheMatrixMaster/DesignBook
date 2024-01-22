@@ -1,0 +1,304 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "UniversalComparator",
+            "request": "launch",
+            "mainClass": "e2.chapter3.UniversalComparator",
+            "projectName": "DesignBook_ff51140a",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
+            "name": "Hand",
+            "request": "launch",
+            "mainClass": "e2.chapter3.Hand",
+            "projectName": "DesignBook_ff51140a",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
+            "name": "TwelveDays",
+            "request": "launch",
+            "mainClass": "chapter1.TwelveDays",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "TwelveDays2",
+            "request": "launch",
+            "mainClass": "chapter1.TwelveDays2",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "TwelveDaysIterative",
+            "request": "launch",
+            "mainClass": "chapter1.TwelveDaysIterative",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Card2",
+            "request": "launch",
+            "mainClass": "chapter2.Card2",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "EnumeratedCard",
+            "request": "launch",
+            "mainClass": "chapter2.EnumeratedCard",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Hand",
+            "request": "launch",
+            "mainClass": "chapter3.Hand",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "UniversalComparator",
+            "request": "launch",
+            "mainClass": "chapter3.UniversalComparator",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Card4",
+            "request": "launch",
+            "mainClass": "chapter4.Card4",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Card5",
+            "request": "launch",
+            "mainClass": "chapter4.Card5",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "chapter4.Client",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "MetaprogrammingSamples",
+            "request": "launch",
+            "mainClass": "chapter5.MetaprogrammingSamples",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "NumberLoader",
+            "request": "launch",
+            "mainClass": "chapter5.NumberLoader",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "StringTester",
+            "request": "launch",
+            "mainClass": "chapter5.StringTester",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "CardImages",
+            "request": "launch",
+            "mainClass": "chapter6.CardImages",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Client(1)",
+            "request": "launch",
+            "mainClass": "chapter6.Client",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "HandDealer",
+            "request": "launch",
+            "mainClass": "chapter6.HandDealer",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Program2",
+            "request": "launch",
+            "mainClass": "chapter6.Program2",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Client(2)",
+            "request": "launch",
+            "mainClass": "chapter7.Client",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "MemorizingDeck",
+            "request": "launch",
+            "mainClass": "chapter7.MemorizingDeck",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Driver",
+            "request": "launch",
+            "mainClass": "chapter8.Driver",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Inventory",
+            "request": "launch",
+            "mainClass": "chapter8.Inventory",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "LuckyNumber",
+            "request": "launch",
+            "mainClass": "chapter8.LuckyNumber",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "PrintVisitor",
+            "request": "launch",
+            "mainClass": "chapter8.PrintVisitor",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "UserInterface",
+            "request": "launch",
+            "mainClass": "chapter8.UserInterface",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "CardViewer",
+            "request": "launch",
+            "mainClass": "chapter9.CardViewer",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "CommandClient",
+            "request": "launch",
+            "mainClass": "chapter9.CommandClient",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Samples",
+            "request": "launch",
+            "mainClass": "chapter9.Samples",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "StrategyClient",
+            "request": "launch",
+            "mainClass": "chapter9.StrategyClient",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "TwelveDays(1)",
+            "request": "launch",
+            "mainClass": "e2.chapter1.TwelveDays",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Multideck",
+            "request": "launch",
+            "mainClass": "e2.chapter2.Multideck",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Client(3)",
+            "request": "launch",
+            "mainClass": "e2.chapter4.Client",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "MetaprogrammingSamples(1)",
+            "request": "launch",
+            "mainClass": "e2.chapter5.MetaprogrammingSamples",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Driver(1)",
+            "request": "launch",
+            "mainClass": "e2.chapter8.Driver",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "GenericVisitorSample",
+            "request": "launch",
+            "mainClass": "e2.chapter8.GenericVisitorSample",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "LuckyNumber(1)",
+            "request": "launch",
+            "mainClass": "e2.chapter8.LuckyNumber",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "PrintVisitor(1)",
+            "request": "launch",
+            "mainClass": "e2.chapter8.PrintVisitor",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "ConsumingDecorator",
+            "request": "launch",
+            "mainClass": "e2.chapter9.ConsumingDecorator",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "InfiniteCardSource",
+            "request": "launch",
+            "mainClass": "e2.chapter9.InfiniteCardSource",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Samples(1)",
+            "request": "launch",
+            "mainClass": "e2.chapter9.Samples",
+            "projectName": "DesignBook_ff51140a"
+        }
+    ]
+}
