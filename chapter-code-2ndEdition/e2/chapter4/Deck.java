@@ -44,6 +44,8 @@ public class Deck implements CardSource {
                 aCards.add( Card.get( rank, suit ));
             }
 		}
+		aCards.add(Card.get(true));
+		aCards.add(Card.get(false));
 		Collections.shuffle(aCards);
 	}
 	
@@ -119,7 +121,7 @@ public class Deck implements CardSource {
 			private int countCards(Deck pDeck) { 
 				int result = 0;
 				for( Card card : pDeck.aCards ) {
-					if( card.getRank() == pRank ) {
+					if( !card.isJoker() && card.getRank().get() == pRank ) {
 						result++;
 					}
 				}

@@ -1,14 +1,11 @@
 package e2.chapter3;
 
-import java.lang.Comparable;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Iterator;
-import java.lang.Iterable;
 
-
-public class Hand implements Iterable<Card>, Comparable<Hand> {
+public class Hand implements EditableHand {
     
     private int aN;
     private List<Card> aCards;
@@ -22,7 +19,7 @@ public class Hand implements Iterable<Card>, Comparable<Hand> {
         assert pCard != null;
         assert !isFull();
         aCards.add(pCard);
-    } 
+    }
 
     public void remove(Card pCard) {
         assert pCard != null;
@@ -111,6 +108,8 @@ public class Hand implements Iterable<Card>, Comparable<Hand> {
 
         Hand hand2 = new Hand(9);
         hand2.add(new Card(Rank.EIGHT, Suit.HEARTS));
+
+        ReadonlyHand rHand = new Hand(10);
 
         System.out.println(hand.compareTo(hand2));
         System.out.println(Hand.createAscendingComparator().compare(hand, hand2));

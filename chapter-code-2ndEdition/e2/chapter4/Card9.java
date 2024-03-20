@@ -12,30 +12,26 @@
  *******************************************************************************/
 package e2.chapter4;
 import java.util.Optional;
-import java.lang.Class;
-
 import java.lang.Comparable;
-import java.lang.reflect.Field;
 
 /**
  * Implementation of a playing card. This class yields immutable objects.
  * This version of the class shows an application of the Flyweight design
  * pattern where the flyweight store is pre-initialized.
  */
-public class Card implements Comparable<Card> {
+public class Card9 implements Comparable<Card9> {
 
-	public static void main(String[] args)
-	{
-		Card card1 = new Card(Rank.ACE, Suit.CLUBS);
-		Class<?> class1 = card1.getClass();
-
-		try {
-			Field rankOfCard = class1.getDeclaredField("aRank");
-			rankOfCard.setAccessible(true);
-			rankOfCard.set(card1, Optional.of(Rank.JACK));
-		} catch (NoSuchFieldException | IllegalAccessException e) {
-			e.printStackTrace();
+	public static void main(String[] args) {
+		long start = System.currentTimeMillis();
+		for (Rank r : Rank.values()) {
+			for (Suit s : Suit.values()) {
+				Card9.get(r, s);
+			}
 		}
+		long end = System.currentTimeMillis();
+
+		System.out.println(start);
+        System.out.println(end);
 	}
 	
 	/*
@@ -44,8 +40,8 @@ public class Card implements Comparable<Card> {
 	 * and the second dimension, the ranks. For example, to retrieve the two of clubs,
 	 * we access CARDS[Suit.CLUBS.ordinal()][Rank.TWO.ordinal()]. 
 	 */
-	private static final Card[][] CARDS = new Card[Suit.values().length][Rank.values().length];
-	private static final Card[] JOKERS = new Card[2];
+	private static final Card9[][] CARDS = new Card9[Suit.values().length][Rank.values().length];
+	private static final Card9[] JOKERS = new Card9[2];
 
 	private enum Joker { WHITE, BLACK };
 	
@@ -57,21 +53,21 @@ public class Card implements Comparable<Card> {
 	static {
 		for( Suit suit : Suit.values() ) {
 			for( Rank rank : Rank.values() ) {
-				CARDS[suit.ordinal()][rank.ordinal()] = new Card(rank, suit);
+				CARDS[suit.ordinal()][rank.ordinal()] = new Card9(rank, suit);
 			}
 		}
-		JOKERS[0] = new Card(true);
-		JOKERS[1] = new Card(false);
+		JOKERS[0] = new Card9(true);
+		JOKERS[1] = new Card9(false);
 	}
 	
 	// Private constructor
-	public Card( Rank pRank, Suit pSuit) {
+	private Card9( Rank pRank, Suit pSuit) {
 		aRank = Optional.of(pRank);
 		aSuit = Optional.of(pSuit);
 		aJoker = Optional.empty();
 	}
 
-	public Card( boolean pIsWhiteJoker ) {
+	private Card9( boolean pIsWhiteJoker ) {
 		aRank = Optional.empty();
 		aSuit = Optional.empty();
 		if (pIsWhiteJoker) {
@@ -87,12 +83,12 @@ public class Card implements Comparable<Card> {
 	 * @return The unique Card instance with pRank and pSuit
 	 * @pre pRank != null && pSuit != null
 	 */
-	public static Card get(Rank pRank, Suit pSuit) {
+	public static Card9 get(Rank pRank, Suit pSuit) {
 		assert pRank != null && pSuit != null;
 		return CARDS[pSuit.ordinal()][pRank.ordinal()];
 	}
 
-	public static Card get(boolean pIsWhiteJoker) {
+	public static Card9 get(boolean pIsWhiteJoker) {
 		if (pIsWhiteJoker) {
 			return JOKERS[0];
 		}
@@ -133,7 +129,7 @@ public class Card implements Comparable<Card> {
 	}
 
 	@Override
-	public int compareTo(Card pCard)
+	public int compareTo(Card9 pCard)
 	{
 		if (isJoker() && pCard.isJoker())
 		{
@@ -159,25 +155,15 @@ public class Card implements Comparable<Card> {
 		{
 			return true;
 		}
-		if (pObject == null)
-		{
-			return false;
-		}
-		if (getClass() != pObject.getClass())
+		if (pObject == null || getClass() != pObject.getClass())
 		{
 			return false;
 		}
 
-		Card other = (Card) pObject;
-		
+		Card9 other = (Card9) pObject;
 		return (
 			aSuit.get() == other.aSuit.get() && 
 			aRank.get() == other.aRank.get()
 		);
-	}
-
-	@Override
-	public int hashCode() {
-		return aSuit.hashCode() + aRank.hashCode();
 	}
 }

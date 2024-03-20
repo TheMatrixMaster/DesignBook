@@ -30,7 +30,7 @@ public class TestStack
 	public void testPush_Empty()
 	{
 		String foo = "foo";
-		assertSame(foo, aStack.push(foo));
+		assertSame(foo, aStack.push(foo));	// uses == to assert equality
 		assertSame(foo, aStack.peek());
 	}
 	

@@ -19,10 +19,16 @@ package e2.chapter4;
 public class GameModel {
 	
 	private static final GameModel INSTANCE = new GameModel();
+	private final Deck aDeck = new Deck();
 	
+	// private constructor so the client cannot create more GameModel instances
 	private GameModel() {}
 	
 	public static GameModel instance() { 
-		return INSTANCE; 
+		return INSTANCE;
+	}
+
+	public void newGame() {
+		aDeck.shuffle();
 	}
 }

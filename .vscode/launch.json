@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Hand2",
+            "request": "launch",
+            "mainClass": "e2.chapter3.Hand2",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "FancyCard",
+            "request": "launch",
+            "mainClass": "e2.chapter4.FancyCard",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Card10",
+            "request": "launch",
+            "mainClass": "e2.chapter4.Card10",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Card9",
+            "request": "launch",
+            "mainClass": "e2.chapter4.Card9",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
+            "name": "Card",
+            "request": "launch",
+            "mainClass": "e2.chapter4.Card",
+            "projectName": "DesignBook_ff51140a"
+        },
+        {
+            "type": "java",
             "name": "UniversalComparator",
             "request": "launch",
             "mainClass": "e2.chapter3.UniversalComparator",

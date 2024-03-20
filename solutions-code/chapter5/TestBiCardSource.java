@@ -17,6 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Optional;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class TestBiCardSource
@@ -63,9 +64,15 @@ public class TestBiCardSource
 	 * initialized the field in a method annotated with @BeforeEach
 	 * instead.
 	 */
-	private CardSource aEmpty = new CardSourceStub();
-	private CardSource aContainsAce = new CardSourceStub(ACE);;
-	private CardSource aContainsTwo = new CardSourceStub(TWO);;
+	CardSource aEmpty = new CardSourceStub();
+	CardSource aContainsAce = new CardSourceStub(ACE);
+	CardSource aContainsTwo = new CardSourceStub(TWO);
+
+	@BeforeEach
+	public void setup() {
+		aContainsAce = new CardSourceStub(ACE);
+		aContainsTwo = new CardSourceStub(TWO);
+	}
 	
 	@Test
 	public void testEmpty_True()
